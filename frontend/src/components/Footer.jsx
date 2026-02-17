@@ -2,10 +2,18 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaInstagram } from 'react-icons/fa'
 import { HiMail } from 'react-icons/hi'
+import { IoArrowUp } from 'react-icons/io5'
 import './Footer.css'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <footer className="footer">
@@ -113,6 +121,15 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p>Comfort. Confidence. Conscious living.</p>
+          <motion.button
+            className="scroll-to-top-btn"
+            onClick={scrollToTop}
+            whileHover={{ scale: 1.1, y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Scroll to top"
+          >
+            <IoArrowUp />
+          </motion.button>
         </div>
       </div>
     </footer>
