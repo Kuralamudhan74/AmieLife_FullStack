@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:confitextechnology.com)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm cache clean:*)",
+      "Bash(\"d:/Synora_Technologies/AmieLife_FullStack/frontend/vite.config.js\":*)",
+      "Bash(\"d:/Synora_Technologies/AmieLife_FullStack/frontend/index.html\":*)",
+      "Bash(\"d:/Synora_Technologies/AmieLife_FullStack/frontend/src/index.css\":*)",
+      "Bash(\"d:/Synora_Technologies/AmieLife_FullStack/frontend/src/main.jsx\":*)",
+      "Bash(\"d:/Synora_Technologies/AmieLife_FullStack/frontend/src/App.css\":*)",
+      "Bash(python3:*)",
+      "Bash(\"d:/Synora_Technologies/AmieLife_FullStack/frontend/README.md\":*)"
+    ]
+  }
+}

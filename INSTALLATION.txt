@@ -1,0 +1,65 @@
+=================================================================
+    AMIE LIFE - WEBSITE INSTALLATION GUIDE
+=================================================================
+
+QUICK INSTALLATION (3 Steps):
+=============================
+
+1. Open Terminal/Command Prompt
+
+2. Navigate to project:
+   cd d:/Synora_Technologies/AmieLife_FullStack/frontend
+
+3. Install and run:
+   npm install
+   npm run dev
+
+   (Or if that fails: npm cache clean --force && npm install)
+
+4. Open browser: http://localhost:3000
+
+THATS IT! Your website is ready!
+
+=================================================================
+
+WHAT YOU HAVE:
+==============
+✓ Complete React website with modern design
+✓ Home page with 7+ sections
+✓ About page with 6+ sections  
+✓ Sticky header navigation
+✓ Mobile responsive design
+✓ Smooth animations and effects
+✓ Product carousels
+✓ Testimonial sliders
+✓ Beautiful footer
+
+EFFECTS INCLUDED:
+=================
+✓ Parallax scrolling
+✓ Floating animations
+✓ Glass morphism
+✓ Smooth transitions
+✓ Hover effects
+✓ Scroll reveal animations
+✓ Video background support
+
+NEXT STEPS:
+===========
+1. Add your product images to: public/images/products/
+2. Add your logo to: public/images/
+3. Update content in: src/pages/Home.jsx and About.jsx
+4. Build for production: npm run build
+5. Deploy the 'dist' folder
+
+HOSTING OPTIONS:
+================
+- Vercel (recommended): vercel.com
+- Netlify: netlify.com
+- GitHub Pages: pages.github.com
+
+All free and easy to use!
+
+=================================================================
+Need help? Check README.md and QUICKSTART.md in the frontend folder
+=================================================================
