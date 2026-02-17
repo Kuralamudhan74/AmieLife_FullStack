@@ -80,6 +80,11 @@
   font-size: 0.9rem;
 }
 
+/* Contact button link styling */
+.header-content>a {
+  text-decoration: none;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -127,7 +132,14 @@
   margin: 1rem 1.5rem 0;
 }
 
+/* Mobile contact link styling */
+.mobile-menu>nav>a {
+  text-decoration: none;
+  display: block;
+}
+
 @media (max-width: 968px) {
+
   .desktop-nav,
   .sign-up-btn {
     display: none;

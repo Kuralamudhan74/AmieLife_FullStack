@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
+import { FaInstagram } from 'react-icons/fa'
 import { HiMail } from 'react-icons/hi'
 import './Footer.css'
 
@@ -56,9 +55,9 @@ const Footer = () => {
             <div className="footer-column footer-brand-col">
               <Link to="/" className="footer-logo">
                 <svg width="35" height="35" viewBox="0 0 40 40" fill="none">
-                  <circle cx="20" cy="20" r="18" fill="#F5F1E8"/>
-                  <path d="M20 8L25 18H15L20 8Z" fill="#2B1B3D"/>
-                  <circle cx="20" cy="25" r="5" fill="#2B1B3D"/>
+                  <circle cx="20" cy="20" r="18" fill="#F5F1E8" />
+                  <path d="M20 8L25 18H15L20 8Z" fill="#2B1B3D" />
+                  <circle cx="20" cy="25" r="5" fill="#2B1B3D" />
                 </svg>
                 <span>amie</span>
               </Link>
@@ -81,29 +80,30 @@ const Footer = () => {
               <h4>Follow us</h4>
               <div className="social-links">
                 <motion.a
-                  href="#"
+                  href="https://www.instagram.com/amie_yourdaysecured"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="social-link"
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaInstagram />
                 </motion.a>
-                <motion.a
-                  href="#"
-                  className="social-link"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaFacebookF />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="social-link"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaXTwitter />
-                </motion.a>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="footer-column footer-contact-col">
+              <h4>Contact</h4>
+              <div className="contact-info">
+                <a href="mailto:premalatha@novcor.in" className="contact-link">
+                  <span className="contact-label">Email:</span>
+                  <span>premalatha@novcor.in</span>
+                </a>
+                <a href="tel:+918072590967" className="contact-link">
+                  <span className="contact-label">Phone:</span>
+                  <span>+91 8072590967</span>
+                </a>
               </div>
             </div>
           </div>
