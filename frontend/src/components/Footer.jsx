@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { HiMail } from 'react-icons/hi'
 import './Footer.css'
 
@@ -51,14 +52,8 @@ const Footer = () => {
       <div className="footer-main">
         <div className="container">
           <div className="footer-grid">
-            {/* Logo & Social */}
-            <motion.div
-              className="footer-column"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
+            {/* Logo & Tagline */}
+            <div className="footer-column footer-brand-col">
               <Link to="/" className="footer-logo">
                 <svg width="35" height="35" viewBox="0 0 40 40" fill="none">
                   <circle cx="20" cy="20" r="18" fill="#F5F1E8"/>
@@ -70,15 +65,21 @@ const Footer = () => {
               <p className="footer-tagline">
                 Comfort. Confidence. Conscious living.
               </p>
+            </div>
+
+            {/* Links */}
+            <div className="footer-column footer-links-col">
+              <ul className="footer-links">
+                <li><Link to="/faqs">FAQs</Link></li>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
+                <li><Link to="/terms">Terms & Conditions</Link></li>
+              </ul>
+            </div>
+
+            {/* Follow Us */}
+            <div className="footer-column footer-social-col">
+              <h4>Follow us</h4>
               <div className="social-links">
-                <motion.a
-                  href="#"
-                  className="social-link"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaFacebookF />
-                </motion.a>
                 <motion.a
                   href="#"
                   className="social-link"
@@ -93,7 +94,7 @@ const Footer = () => {
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaTwitter />
+                  <FaFacebookF />
                 </motion.a>
                 <motion.a
                   href="#"
@@ -101,51 +102,17 @@ const Footer = () => {
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaLinkedinIn />
+                  <FaXTwitter />
                 </motion.a>
               </div>
-            </motion.div>
-
-            {/* Quick Links */}
-            <motion.div
-              className="footer-column"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h4>Quick Links</h4>
-              <ul className="footer-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/shop">Shop</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/support">Support</Link></li>
-              </ul>
-            </motion.div>
-
-            {/* Support */}
-            <motion.div
-              className="footer-column"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h4>Support</h4>
-              <ul className="footer-links">
-                <li><Link to="/faqs">FAQs</Link></li>
-                <li><Link to="/privacy">Privacy Policy</Link></li>
-                <li><Link to="/terms">Terms & Conditions</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-              </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
         <div className="container">
-          <p>© {currentYear} AMIE LIFE. All rights reserved.</p>
+          <p>Comfort. Confidence. Conscious living.</p>
         </div>
       </div>
     </footer>
