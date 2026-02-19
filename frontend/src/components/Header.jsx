@@ -42,9 +42,9 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
             >
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="20" r="18" fill="#2B1B3D"/>
-                <path d="M20 8L25 18H15L20 8Z" fill="#F5F1E8"/>
-                <circle cx="20" cy="25" r="5" fill="#F5F1E8"/>
+                <circle cx="20" cy="20" r="18" fill="#2B1B3D" />
+                <path d="M20 8L25 18H15L20 8Z" fill="#F5F1E8" />
+                <circle cx="20" cy="25" r="5" fill="#F5F1E8" />
               </svg>
               <span className="logo-text">amie</span>
             </motion.div>
@@ -70,14 +70,16 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Sign Up Button */}
-          <motion.button
-            className="btn btn-primary sign-up-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Sign Up
-          </motion.button>
+          {/* Contact Button */}
+          <Link to="/contact">
+            <motion.button
+              className="btn btn-primary sign-up-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact
+            </motion.button>
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -116,14 +118,16 @@ const Header = () => {
                   </Link>
                 </motion.div>
               ))}
-              <motion.button
-                className="btn btn-primary mobile-sign-up"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                Sign Up
-              </motion.button>
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                <motion.button
+                  className="btn btn-primary mobile-sign-up"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  Contact
+                </motion.button>
+              </Link>
             </nav>
           </motion.div>
         )}
