@@ -58,6 +58,13 @@
   justify-content: center;
   color: #999;
   font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.about-hero-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-hero-tagline {
@@ -105,6 +112,13 @@
 .who-are-we-image .image-placeholder {
   border-radius: 12px;
   min-height: 400px;
+}
+
+.who-are-we-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* ========================
@@ -214,6 +228,13 @@
   border-radius: 12px;
 }
 
+.why-trust-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 /* ========================
    TECHNOLOGY AT CORE SECTION
    ======================== */
@@ -232,6 +253,13 @@
 }
 
 .tech-core-visual .image-placeholder {
+  border-radius: 12px;
+}
+
+.tech-core-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -294,7 +322,7 @@
   letter-spacing: 1px;
 }
 
-.fit-for-life-text > p {
+.fit-for-life-text>p {
   color: var(--text-light);
   font-size: 1rem;
   line-height: 1.8;

@@ -46,25 +46,28 @@ const Home = () => {
   };
 
   const productCategories = [
-    { name: 'Period Panties and Nightwear', placeholder: true },
-    { name: 'Reusable Baby Diapers', placeholder: true },
-    { name: "Men's and Women's Incontinence Wear", placeholder: true },
-    { name: 'First Period Gift Hampers', placeholder: true },
-    { name: 'Reusable Absorbent Inserts', placeholder: true },
+    { name: 'Period Panties and Nightwear', image: '/images/tried1.jpeg' },
+    { name: 'Reusable Baby Diapers', image: '/images/tried2.jpeg' },
+    { name: "Men's and Women's Incontinence Wear", image: '/images/tried3.jpeg' },
+    { name: 'First Period Gift Hampers', image: '/images/tried4.jpeg' },
+    { name: 'Reusable Absorbent Inserts', image: '/images/tried5.jpeg' },
   ];
 
   const testimonials = [
     {
       quote: "I forgot I was wearing leak-proof underwear. That's the best part.",
       author: 'Sharon A',
+      image: '/images/testimonal1.jpg'
     },
     {
       quote: 'No rashes, no discomfort, just reliable protection through long days.',
       author: 'Deepika',
+      image: '/images/testimonal2.jpg'
     },
     {
       quote: 'Sustainable, comfortable, and genuinely dependable.',
       author: 'Malini',
+      image: '/images/testimonal3.jpg'
     },
   ];
 
@@ -72,6 +75,10 @@ const Home = () => {
     <div className="home-page">
       {/* ===== HERO SECTION ===== */}
       <section className="hero-section" ref={heroRef}>
+        <video className="hero-video-bg" autoPlay muted loop>
+          <source src="/images/Video Hokmke page Intro section.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <motion.div
@@ -104,9 +111,6 @@ const Home = () => {
             Next-Gen Reusable Leak-Proof Wear for Every Stage of Life
           </motion.p>
         </div>
-        <div className="hero-video-placeholder">
-          <span>/Videos/</span>
-        </div>
       </section>
 
       {/* ===== FEATURE SECTION - Designed with advanced absorbent textile technology ===== */}
@@ -119,7 +123,7 @@ const Home = () => {
             variants={fadeUp}
           >
             <div className="feature-highlight-image">
-              <div className="image-placeholder">IMAGE</div>
+              <img src="/images/Why AIME Life home page.jpg" alt="Advanced absorbent textile technology" />
             </div>
             <div className="feature-highlight-text">
               <h2>Designed with advanced absorbent textile technology</h2>
@@ -165,13 +169,19 @@ const Home = () => {
             animate={protectionInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[
+              '/images/Why AIME Life home page.jpg',
+              '/images/Our reusable choice home page.jpg',
+              '/images/Who are we about us.jpg',
+              '/images/Why trust us About us.jpg',
+              '/images/Join the AMIE Life About Us.jpg',
+              '/images/Technology at the core about us.jpg'
+            ].map((imgSrc, i) => (
               <motion.div key={i} className="protection-item" variants={fadeUp}>
-                <div className="image-placeholder small">/images/</div>
+                <img src={imgSrc} alt="Protection product" className="protection-image" />
               </motion.div>
             ))}
           </motion.div>
-          <p className="protection-caption">/Product Images /</p>
         </div>
       </section>
 
@@ -203,7 +213,7 @@ const Home = () => {
               </p>
             </motion.div>
             <motion.div className="why-amie-image" variants={fadeUp}>
-              <div className="image-placeholder tall">/Images/</div>
+              <img src="/images/Our reusable choice home page.jpg" alt="Why AMIE LIFE - Reusable products" />
             </motion.div>
           </motion.div>
         </div>
@@ -236,7 +246,7 @@ const Home = () => {
           >
             {productCategories.map((product, index) => (
               <motion.div key={index} className="product-category-card" variants={fadeUp}>
-                <div className="image-placeholder product-img"></div>
+                <img src={product.image} alt={product.name} className="product-img" />
                 <p className="product-category-name">{product.name}</p>
               </motion.div>
             ))}
@@ -270,7 +280,7 @@ const Home = () => {
               </p>
             </motion.div>
             <motion.div className="science-visual" variants={fadeUp}>
-              <div className="image-placeholder tall">/Images/</div>
+              <img src="/images/The Science behind staying dry.jpg" alt="The Science Behind Staying Dry" />
             </motion.div>
           </motion.div>
         </div>
@@ -295,7 +305,7 @@ const Home = () => {
           >
             {testimonials.map((t, index) => (
               <motion.div key={index} className="testimonial-card" variants={fadeUp}>
-                <div className="testimonial-image-area"></div>
+                <img src={t.image} alt={t.author} className="testimonial-image" />
                 <p className="testimonial-text">"{t.quote}" — {t.author}</p>
               </motion.div>
             ))}
@@ -327,7 +337,7 @@ const Home = () => {
               <p className="sustainability-tagline">Better for you. Better for the planet.</p>
             </motion.div>
             <motion.div className="sustainability-image" variants={fadeUp}>
-              <div className="image-placeholder tall">/Images/</div>
+              <img src="/images/Why AIME Life home page.jpg" alt="One Reusable Choice. Years of Impact." />
             </motion.div>
           </motion.div>
         </div>

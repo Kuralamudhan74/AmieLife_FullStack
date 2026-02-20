@@ -54,7 +54,7 @@ const About = () => {
             Join the AMIE Life
           </motion.h1>
           <div className="about-hero-image-placeholder">
-            <span>/image/</span>
+            <img src="/images/Join the AMIE Life About Us.jpg" alt="Join the AMIE Life" />
           </div>
           <motion.h2
             className="about-hero-tagline"
@@ -86,7 +86,7 @@ const About = () => {
               </p>
             </motion.div>
             <motion.div className="who-are-we-image" variants={fadeUp}>
-              <div className="image-placeholder tall">/image/</div>
+              <img src="/images/Who are we about us.jpg" alt="Who Are We" />
             </motion.div>
           </motion.div>
         </div>
@@ -146,7 +146,7 @@ const About = () => {
               </ul>
             </motion.div>
             <motion.div className="why-trust-image" variants={fadeUp}>
-              <div className="image-placeholder tall">/image/</div>
+              <img src="/images/Why trust us About us.jpg" alt="Why Trust Us" />
             </motion.div>
           </motion.div>
         </div>
@@ -162,7 +162,7 @@ const About = () => {
             variants={stagger}
           >
             <motion.div className="tech-core-visual" variants={fadeUp}>
-              <div className="image-placeholder tall light">/image/</div>
+              <img src="/images/Technology at the core about us.jpg" alt="Technology at the Core" />
             </motion.div>
             <motion.div className="tech-core-text" variants={fadeUp}>
               <h3>TECHNOLOGY AT THE CORE</h3>
